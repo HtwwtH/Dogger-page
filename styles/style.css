@@ -28,6 +28,11 @@ body{
     padding: 5px;
 }
 
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
 header{
     background: #8d7f78;
 }
@@ -115,8 +120,6 @@ header{
         }
     }
     
-    
-
 .bottom_line{
     text-align: center;
     padding-top: 45px;
@@ -125,23 +128,27 @@ header{
 
 .bottom_line p{
     font-size: 43px;
-    line-height: 49px;
+    line-height: 1.2;
     color: #f7f3ea;
     font-weight: 700;
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 768px) {
+    .bottom_line p {
+        font-size: 28px;
+    }
+  }
+
 .button{
     display: inline-block;
-    padding-left: 80px;
-    padding-right: 80px;
-    height: 65px;
+    padding: 20px 10%;
     text-decoration: none;
     background: #e7b193;
     border-radius: 3px;
     font-size: 18px;
     letter-spacing: 0.02em;
-    line-height: 65px;
+    line-height: 1;
     font-weight: 600;
     color: #ffffff;
     text-transform: uppercase;
@@ -172,6 +179,12 @@ section h2{
     position: relative;
 }
 
+@media screen and (max-width: 768px) {
+    section h2 {
+        font-size: 28px;
+    }
+  }
+
 section h2:after{
     content: "";
     display: block;
@@ -193,6 +206,12 @@ section .description{
     margin-bottom: 68px;
 }
 
+@media screen and (max-width: 768px) {
+    section .description {
+        font-size: 20px;
+    }
+  }
+
 section.services .dogs_list{
     display: flex;
     justify-content: center;
@@ -208,9 +227,15 @@ section.services .dogs_list .dog_item{
 }
 
 .DogSvg {
-    height: 90%;
-    width: 90%;
+    height: 80%;
+    width: 80%;
+    transition: transform .3s ease-in-out;
   }
+
+.DogSvg:hover{
+    transform: rotate( 15deg );
+    transition: transform .3s ease-in-out;
+}
 
 section.services .dogs_list .dog_item h3{
     color: #ffffff;
@@ -219,7 +244,7 @@ section.services .dogs_list .dog_item h3{
     letter-spacing: 0.02em;
     font-weight: 700;
     text-transform: uppercase;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
@@ -265,6 +290,12 @@ section.contact .contact_form input[type="text"],section.contact .contact_form i
     box-sizing: border-box;
 }
 
+@media screen and (max-width: 768px) {
+    section.contact .contact_form input[type="text"],section.contact .contact_form input[type="email"] {
+        width: 100%;
+    }
+  }
+
 input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {font-family: 'Titillium Web', sans-serif; color:#ffffff; font-size: 18px;}
 input::-moz-placeholder,textarea::-moz-placeholder          {font-family: 'Titillium Web', sans-serif; color:#ffffff; font-size: 18px;}/* Firefox 19+ */
 input:-moz-placeholder,textarea::-moz-placeholder           {font-family: 'Titillium Web', sans-serif; color:#ffffff; font-size: 18px;}/* Firefox 18- */
@@ -291,22 +322,21 @@ section.contact .contact_form .submit{
 
 section.contact .contact_form input[type="submit"]{
     display: inline-block;
-    padding-left: 60px;
-    padding-right: 60px;
-    height: 65px;
+    padding: 20px 10%;
     text-decoration: none;
     border: 0;
     background: #e7b193;
     border-radius: 3px;
     font-size: 18px;
     letter-spacing: 0.02em;
-    line-height: 65px;
+    line-height: 1;
     font-weight: 600;
     color: #ffffff;
     text-transform: uppercase;
     border-bottom: 4px solid #c5977d;
     transition: background .3s ease-in-out;
 }
+
 
 section.contact .contact_form input[type="submit"]:hover{
     background: #c5977d;
