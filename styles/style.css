@@ -38,15 +38,19 @@ header{
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 400;
+    display: flex;
+    align-items: center;
 }
 
 .header_nav a{
     text-decoration: none;
     color: inherit;
+    outline: none;
 }
 
 .header_nav ul{
     display: flex;
+    flex-direction: row;
 }
 
 .header_nav ul li{
@@ -70,6 +74,48 @@ header{
     border-radius: 3px;
     transition: background .3s ease-in-out;
 }
+
+#pull{
+    display: none;
+}
+
+@media only screen and (max-width : 768px) {
+        .header_nav {
+            display: flex;
+            flex-direction: column-reverse;
+            border-bottom: 0;
+        }
+        
+        .header_nav ul{
+            display: none;
+            flex-direction: column;
+        }
+
+        .header_nav ul li{
+            display: block;
+            text-align: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 0 1px;
+            height: 32px;
+            line-height: 32px;
+            height: auto;
+        }
+        .header_nav a#pull {
+            display: block;
+            /* width: 100%; */
+            position: relative;
+            transition: background .3s ease-in-out;
+        }
+
+        .header_nav a#pull:hover{
+            background: #a68e80;
+            border-radius: 3px;
+            transition: background .3s ease-in-out;
+        }
+    }
+    
+    
 
 .bottom_line{
     text-align: center;
@@ -149,15 +195,22 @@ section .description{
 
 section.services .dogs_list{
     display: flex;
+    justify-content: center;
     align-items: flex-start;
-    justify-content: space-between;
-   
+    flex-wrap: wrap;
 }
 
 section.services .dogs_list .dog_item{
     padding: 0 15px;
-
+    margin: 0 2px;
+    width: calc(25% - 34px);
+    min-width: 150px;
 }
+
+.DogSvg {
+    height: 90%;
+    width: 90%;
+  }
 
 section.services .dogs_list .dog_item h3{
     color: #ffffff;
@@ -285,6 +338,7 @@ footer{
 
 .footer_nav ul{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
