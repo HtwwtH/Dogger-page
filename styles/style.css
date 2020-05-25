@@ -258,6 +258,10 @@ section.services .dogs_list .dog_item p{
     margin-bottom: 10px;
 }
 
+section.services .dogs_list .dog_item a{
+    outline: none;
+}
+
 section.contact{
     background: #fef7e4;
     padding: 120px 0;
