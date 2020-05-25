@@ -365,6 +365,7 @@ footer{
 .footer_nav a{
     text-decoration: none;
     color: inherit;
+    outline: none;
 }
 
 .footer_nav ul{
